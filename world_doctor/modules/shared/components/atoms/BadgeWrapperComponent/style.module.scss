@@ -1,0 +1,10 @@
+.badgeWrapperComponent {
+  position: relative;
+
+  .badge {
+    width: fit-content;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+}

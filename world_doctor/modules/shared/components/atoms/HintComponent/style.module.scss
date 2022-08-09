@@ -1,0 +1,20 @@
+.hintComponent {
+  cursor: pointer;
+  width: fit-content;
+
+  p {
+    position: absolute;
+
+    z-index: 10;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-title);
+    line-height: 22px;
+    display: none;
+
+    &.isOpen {
+      display: block;
+      overflow: visible;
+    }
+  }
+}
