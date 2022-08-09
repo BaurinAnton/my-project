@@ -1,0 +1,26 @@
+@import "../../../variables.scss";
+.swiperContainer {
+    @media (min-width: 992px) {
+        padding-bottom: 1.875em;
+    }
+    div:nth-of-type(1) {
+        @media (min-width: 992px) {
+            height: 0.625em;
+            background-color: $headerText;
+            border-radius: 0;
+        }
+        div:nth-child(1) {
+            @media (min-width: 992px) {
+                background-color: $headerTextSecondary;
+            }
+        }
+    }
+    .swiperSlide {
+        height: 100% !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        img {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}

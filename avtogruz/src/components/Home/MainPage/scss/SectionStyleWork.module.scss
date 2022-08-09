@@ -1,0 +1,39 @@
+@import "../../../variables.scss";
+
+.Work {
+    background-color: $headerColor;
+    padding-top: 8.25em;
+    padding-bottom: 8.25em;
+    background-image: url(../../../../img/Main/Work/line.svg);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 50%;
+    .wrapper {
+        @include MaxWidth;
+        .container {
+            .row:nth-child(1) {
+                margin-bottom: 5.5625em;
+                h2 {
+                    font-size: 2.375em;
+                    font-weight: 700;
+                    color: $headerText;
+                    text-transform: uppercase;
+                }
+            }
+            .row:nth-child(2) {
+                .Swiper {
+                    padding-bottom: 1.875em;
+                    div:nth-child(1) {
+                        background: $headerText;
+                        bottom: 0;
+                        height: 0.625em;
+                        border-radius: 0;
+                        div:nth-child(1) {
+                            background-color: $headerTextSecondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

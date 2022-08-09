@@ -1,0 +1,94 @@
+// Переменные
+$headerColor: #222222;
+$headerText: #ffffff;
+$headerTextSecondary: #ed5f00;
+$headerModalWindow: #060606;
+
+// Обнуление
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+// Подключение шрифта
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+// Код стилей
+.HeaderDesktop {
+    @media (max-width: 991px) {
+        font-size: 12px;
+    }
+    @media (max-width: 1140px) {
+        font-size: 14px;
+    }
+    background-color: $headerColor;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    .wrapper {
+        max-width: 1240px;
+        margin: 0 auto;
+        @media (max-width: 1280px) {
+            max-width: 100%;
+            padding: 1em 1.25rem;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0;
+        .column:nth-of-type(1) {
+            a {
+                background-image: url(../../../../img/Header/logo.svg);
+                width: 10.9375em;
+                display: block;
+                height: 3.9375em;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .column:nth-of-type(2) {
+            flex-basis: 70%;
+            @media (max-width: 1200px) {
+                flex-basis: 75%;
+            }
+            @media (max-width: 991px) {
+                flex-basis: 72%;
+            }
+            .column_row:nth-of-type(1) {
+                margin-bottom: 1em;
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-between;
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: $headerText;
+                            font-size: 1em;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            &:hover {
+                                color: $headerTextSecondary;
+                            }
+                        }
+                    }
+                }
+            }
+            .column_row:nth-of-type(2) {
+                display: flex;
+                justify-content: space-between;
+                a {
+                    &:hover {
+                        color: $headerText;
+                    }
+                    color: $headerTextSecondary;
+                    font-size: 1em;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

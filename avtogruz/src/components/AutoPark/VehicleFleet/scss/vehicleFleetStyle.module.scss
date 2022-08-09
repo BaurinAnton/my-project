@@ -1,0 +1,65 @@
+@import "../../../variables.scss";
+
+.AutoPark {
+    padding-top: 6.25em;
+    background-color: $headerColor;
+    .wrapper {
+        padding: 6.875em 0;
+        @include MaxWidth;
+        .row:nth-of-type(1) {
+            h2 {
+                @include titleH2;
+            }
+            .column {
+                margin-top: 5.625em;
+                display: flex;
+                flex-direction: column;
+                p {
+                    font-weight: 500;
+                    font-size: 1.5em;
+                    &:nth-of-type(1) {
+                        align-self: flex-start;
+                        margin-bottom: 1.875em;
+                    }
+                    &:nth-of-type(2) {
+                        align-self: center;
+                        margin-bottom: 1.875em;
+                    }
+                    &:nth-of-type(3) {
+                        align-self: flex-end;
+                    }
+                    .colorWhite {
+                        color: $headerText;
+                    }
+                    .colorOrange {
+                        color: $headerTextSecondary;
+                    }
+                }
+            }
+        }
+        .row:nth-of-type(2) {
+            margin-top: 6.875em;
+            h2 {
+                @include titleH2;
+                margin-bottom: 2.37em;
+            }
+        }
+        .row:nth-of-type(3) {
+            margin: 6.875em 0;
+            h2 {
+                @include titleH2;
+            }
+            img {
+                margin-top: 5.625em;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .row:nth-of-type(4) {
+            h2 {
+                @include titleH2;
+                margin-bottom: 2.368em;
+            }
+        }
+    }
+}

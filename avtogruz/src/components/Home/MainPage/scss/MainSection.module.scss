@@ -1,0 +1,114 @@
+@import "../../../variables.scss";
+
+.SectionMain {
+    background-color: $headerColor;
+    padding-top: 5.9375em;
+    background-image: url(../../../../img/Main/sectionMain/line.svg);
+    @media (max-width: 768px) {
+        background-image: url(../../../../img/Main/sectionMain/lineTablet.png);
+    }
+    background-position-y: 100%;
+    background-position-x: 50%;
+    background-repeat: repeat-x;
+    .wrapper {
+        @include MaxWidth;
+        display: flex;
+        align-items: center;
+        padding-top: 8.25em;
+        padding-bottom: 8.25em;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .column:nth-of-type(1) {
+                flex-basis: 54%;
+                @media (max-width: 767px) {
+                    flex-basis: 100%;
+                }
+                h1 {
+                    font-size: 3.125em;
+                    color: $headerText;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 0.7em;
+                }
+                h2 {
+                    font-size: 1.625em;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: $headerText;
+                    margin-bottom: 1.692em;
+                    width: 20em;
+                    @media (max-width: 991px) {
+                        width: 18em;
+                    }
+                    @media (max-width: 767px) {
+                        width: 20em;
+                    }
+                    @media (max-width: 430px) {
+                        width: 18em;
+                    }
+                }
+                .button {
+                    display: flex;
+                    div {
+                        cursor: pointer;
+                        font-size: 1.5em;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: $headerText;
+                        font-weight: 500;
+                        padding: 0.75em 1.375em;
+                        background-color: $headerTextSecondary;
+                        position: relative;
+                        z-index: 1;
+                        &:hover {
+                            transform: translate(0.27em, 0.27em);
+                            transition-duration: 300ms;
+                        }
+                    }
+                    .buttonBorder {
+                        border: 0.1875em solid $headerText;
+                        padding: 1.08em 6em;
+                        margin-left: -12.4em;
+                        transform: translate(0.4em, 0.4em);
+                    }
+                }
+                .column_box {
+                    display: flex;
+                    margin-top: 2.65em;
+                    h3 {
+                        font-size: 1.25em;
+                        color: $headerText;
+                        font-weight: 300;
+                        margin: 0.3125em 0;
+                        width: 24em;
+                        @media (max-width: 430px) {
+                            width: 18em;
+                        }
+                    }
+                    img {
+                        &:nth-child(1) {
+                            align-self: flex-start;
+                        }
+                        &:nth-child(3) {
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+            .column:nth-of-type(2) {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+                img {
+                    width: 30.875em;
+                    @media (max-width: 991px) {
+                        width: 28em;
+                    }
+                }
+            }
+        }
+    }
+}

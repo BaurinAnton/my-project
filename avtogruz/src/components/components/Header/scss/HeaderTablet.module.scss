@@ -1,0 +1,71 @@
+// Переменные
+$headerColor: #222222;
+$headerText: #ffffff;
+$headerTextSecondary: #ed5f00;
+$headerModalWindow: #060606;
+
+// Обнуление
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+// Подключение шрифта
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.HeaderTablet {
+    background-color: $headerColor;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+    .wrapper {
+        padding: 1em 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .column:nth-child(1) {
+            background-image: url(../../../../img/Header/logo.svg);
+            display: block;
+            width: 10.9375em;
+            height: 3.9375em;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .column:nth-child(2),
+        .column:nth-child(3) {
+            img {
+                width: 1.5625em;
+                margin-right: 0.625em;
+            }
+            a {
+                font-size: 1em;
+                color: $headerTextSecondary;
+                font-weight: 500;
+                text-decoration: none;
+                &:hover {
+                    color: $headerText;
+                }
+            }
+        }
+        .Burger {
+            span {
+                width: 3.75em;
+                height: 0.3125em;
+                background-color: $headerText;
+                display: block;
+                &:nth-of-type(1),
+                &:nth-of-type(2) {
+                    margin-bottom: 0.625em;
+                }
+                &:nth-of-type(2) {
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

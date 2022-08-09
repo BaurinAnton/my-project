@@ -1,0 +1,80 @@
+@import "../../../variables.scss";
+
+.SectionWhyMe {
+    background-color: $headerColor;
+    background-image: url(../../../../img/Main/sectionMain/line.svg);
+    background-position-y: 100%;
+    background-position-x: 50%;
+    background-repeat: repeat-x;
+    @media (min-width: 577px) and (max-width: 620px) {
+        font-size: 11px;
+    }
+    .wrapper {
+        @include MaxWidth;
+        .container {
+            padding-top: 8.25em;
+            padding-bottom: 8.25em;
+            @media (max-width: 430px) {
+                padding-bottom: 10.25em;
+            }
+            .row:nth-child(1) {
+                h2 {
+                    font-size: 2.375em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $headerText;
+                }
+            }
+            .row:nth-child(2) {
+                margin-top: 8.25em;
+                @media (max-width: 768px) {
+                    margin-top: 5em;
+                }
+                display: grid;
+                grid-template-columns: (repeat(3, 1fr));
+                grid-template-rows: (repeat(3, 1fr));
+                grid-row-gap: 5.625em;
+                @media (max-width: 576px) {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 3em;
+                }
+                .column {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 3.125em;
+                        margin-right: 2.1875em;
+                        @media (max-width: 991px) {
+                            margin-right: 1.3em;
+                        }
+                    }
+                    h3 {
+                        font-size: 1.5em;
+                        color: $headerText;
+                        font-weight: 500;
+                        flex-basis: 45%;
+                        @media (max-width: 575px) {
+                            flex-basis: 100%;
+                        }
+                    }
+                    &:nth-of-type(4),
+                    &:nth-of-type(5),
+                    &:nth-of-type(6) {
+                        justify-content: flex-end;
+                        @media (max-width: 767px) {
+                            justify-content: flex-start;
+                        }
+                    }
+                    @media (max-width: 768px) {
+                        // &:nth-of-type(2), &:nth-of-type(5), &:nth-of-type(8) {
+                        //     justify-content: center;
+                        // }
+                        // &:nth-of-type(3), &:nth-of-type(6), &:nth-of-type(9) {
+                        //     justify-content: flex-end;
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}

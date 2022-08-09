@@ -1,0 +1,51 @@
+// Переменные
+$headerColor: #222222;
+$headerText: #ffffff;
+$headerTextSecondary: #ed5f00;
+$headerModalWindow: #060606;
+
+// Обнуление
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+// Подключение шрифта
+body {
+    font-family: "Montserrat", sans-serif;
+    main,
+    footer {
+        @media (max-width: 1140px) {
+            font-size: 14px;
+        }
+        @media (max-width: 991px) {
+            font-size: 12px;
+        }
+        @media (max-width: 430px) {
+            font-size: 10px;
+        }
+    }
+}
+@mixin MaxWidth {
+    @media (min-width: 1280px) {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+    @media (max-width: 1280px) {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+@mixin titleH2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $headerText;
+    font-size: 2.375em;
+}
